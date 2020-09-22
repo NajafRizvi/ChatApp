@@ -1,0 +1,67 @@
+body{
+    background-color: lightskyblue;
+}
+.panel{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 300px;
+}
+.sender{
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+.heading{
+    text-align: center;
+    margin-top: 200px;
+    font-family: 'Oswald', sans-serif;
+    color: #e9f5f8;
+    font-size: 50px
+}
+.alert-message{
+    color: white;
+    background-color: #399cbd;
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+.message_textbox{
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.btn{
+    margin-top: 20px;
+    height: 50px;
+    width: 250px;
+    margin-left: 100px;
+    border-radius: 60px;
+    border: none;
+    background-color: lightskyblue;
+    color: white;
+}
+.btn:hover{
+    background-color: #399cbd;
+    color: white;
+    transform: translatey(-10px);}
+.btn-logout{
+    height: 50px;
+    width: 250px;
+    margin-left: 100px;
+    border-radius: 60px;
+    background-color: #399cbd;
+    color: white;
+    margin-left: 200px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
+}

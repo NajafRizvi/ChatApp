@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat App</title>
+    <!-- Estilos  bootstrap, chat-->
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <!-- Favicons -->
+  <link href="images/icons8-chat-48.png" rel="icon">
+  <link href="images/icons8-chat-48.png" suitcase-icon=>
+    <!-- FireBase Section -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBjcQbdMUCZ2rbEvk-eqg-lF7jaqm0Pzx0",
+      authDomain: "facebookauthentication-bb99b.firebaseapp.com",
+      databaseURL: "https://facebookauthentication-bb99b.firebaseio.com",
+      projectId: "facebookauthentication-bb99b",
+      storageBucket: "facebookauthentication-bb99b.appspot.com",
+      messagingSenderId: "264034990400",
+      appId: "1:264034990400:web:8c1788c73f4ee19bb422a5",
+      measurementId: "G-1T0G2KSW9E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+
+<body class="background">
+
+    <div class="container-fluid mt-5">
+        
+            <!-- inicio de la caja de chat con bootstrap -->  
+            <div class="row mx-auto d-flex justify-content-center">
+                <div class="col-md-4 col-lg-6 col-11">
+                     
+                    <h1 class="heading text-center"><span class="vertical_line" ><img src="images/icons8-chat-96.png" alt="" srcset="">|</span>CHAT-APP</h1>
+                    <div class="row mx-auto d-flex justify-content-center">
+                        <div class="col-11 col-md-12 col-lg-12">
+                            <button class="btn-logout mt-1" onclick="logout()">Logout</button>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-6 col-11">
+                    <div class="panel panel-primary mt-5">
+                        <div class="panel-heading mb-5">
+                            <span><img src="images/icons8-chat-48.png" alt="" srcset=""></span> Chat
+    
+                        </div>
+                        <div class="panel-body">
+                            <ul class="chat"></ul>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12 col-xm-12">
+                                                <!-- Message will be Shown Here -->
+                                                <div id="message_area">
+    
+                                                </div>
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-auto d-flex justify-content-center mt-5">
+                            <div class="col">
+                                <form action="" >
+                                    <div class="form-group">
+                                        <input id="User_name" type="text" class="message_textbox"
+                                        placeholder="Type Your name" />
+                                    </div>
+                                   
+                                          
+        
+                                    <div class="input-group">
+                                        <input id="message_textbox" type="text" class="message_textbox"
+                                            placeholder="Type Ypour Message" />
+                                        
+                                
+                                    </div>
+                                    <div class="input-group">
+                                        <button class="btn" id="Send">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+        integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
