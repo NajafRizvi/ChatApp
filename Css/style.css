@@ -1,8 +1,8 @@
-body{
+.background{
     background-color: lightskyblue;
 }
 .panel{
-    margin-top: 10px;
+    margin-top: 80px;
     margin-left: 50px;
 }
 .panel .slidedown .glyphicon, .chat .glyphicon
@@ -20,11 +20,11 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .heading{
-    text-align: center;
-    margin-top: 200px;
     font-family: 'Oswald', sans-serif;
     color: #e9f5f8;
-    font-size: 50px
+    font-size: 50px;
+    margin-top: 200px;
+    margin-left: 30px;
 }
 .alert-message{
     color: white;
@@ -32,15 +32,8 @@ body{
     font-family: 'Lobster', cursive;
     font-family: 'Roboto', sans-serif;
 }
-.message_textbox{
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.btn{
+
+/* .btn{
     margin-top: 20px;
     height: 50px;
     width: 250px;
@@ -53,15 +46,15 @@ body{
 .btn:hover{
     background-color: #399cbd;
     color: white;
-    transform: translatey(-10px);}
-.btn-logout{
+    transform: translatey(-10px);} */
+.btn{
+    width: 200px;
     height: 50px;
-    width: 250px;
-    margin-left: 100px;
+    margin-left: 120px;
     border-radius: 60px;
     background-color: #399cbd;
     color: white;
-    margin-left: 200px;
     font-family: 'Lobster', cursive;
     font-family: 'Roboto', sans-serif;
+    border-radius: 100px;
 }
