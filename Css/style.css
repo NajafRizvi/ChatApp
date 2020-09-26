@@ -3,7 +3,6 @@
 }
 .panel{
     margin-top: 80px;
-    margin-left: 50px;
 }
 .panel .slidedown .glyphicon, .chat .glyphicon
 {
@@ -33,7 +32,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* .btn{
+.btn-send{
     margin-top: 20px;
     height: 50px;
     width: 250px;
@@ -43,18 +42,18 @@
     background-color: lightskyblue;
     color: white;
 }
-.btn:hover{
+.btn-send:hover{
     background-color: #399cbd;
     color: white;
-    transform: translatey(-10px);} */
+    transform: translatey(-10px);}
 .btn{
-    width: 200px;
+    width: 250px;
     height: 50px;
     margin-left: 120px;
-    border-radius: 60px;
     background-color: #399cbd;
-    color: white;
+    color: wheat;
     font-family: 'Lobster', cursive;
     font-family: 'Roboto', sans-serif;
-    border-radius: 100px;
+    border-radius: 60px;
+    border: none;
 }

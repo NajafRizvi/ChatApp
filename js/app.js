@@ -1,20 +1,5 @@
 window.onload = function(){
-    ShowMessage()
-    var user = firebase.auth().currentUser;
-    var name, email, photoUrl, uid, emailVerified;
-
-if (user != null) {
-  name = user.displayName;
-  email = user.email;
-  photoUrl = user.photoURL;
-  emailVerified = user.emailVerified;
-  uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                   // this value to authenticate with your backend server, if
-                   // you have one. Use User.getToken() instead.
-        
-}
-console.log(name)
-
+    ShowMessage();
     
 }
 let message_area = document.getElementById("message_area")
@@ -66,7 +51,7 @@ function login(){
     var provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider).then(()=> {
         // The signed-in user info.
-        window.location.assign("login.html")
+        window.location.assign("chat.html")
       })
       .catch(function(error) {
        console.log(error)
@@ -74,8 +59,7 @@ function login(){
 }
 logout = ()=>{
     firebase.auth().signOut().then(function() {
-        console.log("successful")
-        window.location.assign("login.html")
+      window.location.assign("index.html")
       }).catch(function(error) {
         console.log(error)
       });

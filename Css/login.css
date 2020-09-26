@@ -3,11 +3,8 @@ body{
     background-color: #399cbd;
 }
 /* style the container */
-.wrapper {
-  position: relative;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px 0 30px 0;
+.card{
+  height: 550px;
 }
 
 /* style inputs and link buttons */
