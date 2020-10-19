@@ -1,6 +1,12 @@
 window.onload = function(){
     ShowMessage();
-    
+    firebase.auth().onAuthStateChanged((user) =>{
+        if(user)
+        {
+            var User = firebase.auth().currentUser 
+            console.log()
+        }})
+
 }
 let message_area = document.getElementById("message_area")
 var message_textbox = document.getElementById("message_textbox")
